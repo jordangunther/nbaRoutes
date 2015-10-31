@@ -1,3 +1,81 @@
-<div class="inner-container">
-
+<style>
+.sameLine {
+    float: left;
+    width: 33%;
+    border: 2px, black;
+}
+.container {
+}
+</style>
+<div class= 'container'>
+	<div class='sameLine'>
+		<div class="inner-container">
+  		<div class="logo">
+    	<img ng-src={{jazz.image}} src={{jazz.image}}>
+  		</div>
+ 		<div class="team-data">
+ 		<div class='game'>
+ 			<p>Utah Jazz<p>
+ 			<p>Wins: {{jazzData.won}} Losses: {{jazzData.losses}}</p>
+ 		</div>
+    	<div class="game" ng-repeat="game in jazzData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      	Date: {{game.createdAt | date:'MMM d, yyyy'}} <br />
+      	{{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      	{{game.opponent}} - {{game.opponentScore}} </br />
+    	</div>
+  		</div>
+		</div>
+	</div>
+	<div class='sameLine'>
+		<div class="inner-container">
+  		<div class="logo">
+    	<img ng-src={{lakers.image}} src={{lakers.image}}>
+  		</div>
+ 		<div class="team-data">
+ 		<div class='game'>
+ 			<p>Los Angeles Lakers<p>
+ 			<p>Wins: {{lakersData.won}} Losses: {{lakersData.losses}}</p>
+ 		</div>
+    	<div class="game" ng-repeat="game in lakersData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      	Date: {{game.createdAt | date:'MMM d, yyyy'}} <br />
+      	{{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      	{{game.opponent}} - {{game.opponentScore}} </br />
+    	</div>
+  		</div>
+		</div>
+	</div>
+	<div class='sameLine'>
+		<div class="inner-container">
+  		<div class="logo">
+    	<img ng-src={{heat.image}} src={{heat.image}}>
+  		</div>
+ 		<div class="team-data">
+ 		<div class='game'>
+ 			<p>Miami Heat<p>
+ 			<p>Wins: {{heatData.won}} Losses: {{heatData.losses}}</p>
+ 		</div>
+    	<div class="game" ng-repeat="game in heatData" ng-class="{'even' : $index % 2 === 0}">
+      <!-- Each game should end up looking something like this:
+        Date: May 29, 1997
+        Utah Jazz - 103
+        Houston Rockets - 100
+      -->
+      	Date: {{game.createdAt | date:'MMM d, yyyy'}} <br />
+      	{{game.homeTeam}} - {{game.homeTeamScore}} <br />
+      	{{game.opponent}} - {{game.opponentScore}} </br />
+    	</div>
+  		</div>
+		</div>
+	</div>
 </div>
+
